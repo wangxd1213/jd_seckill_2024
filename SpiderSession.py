@@ -41,9 +41,9 @@ class SpiderSession:
         self.payload = result
         self.client = result['client']
         self.client_version = result['clientVersion']
-        self.ep_json = json.loads(self.payload['ep'])
-        self.uuid = util.decode_base64(self.ep_json['cipher']['uuid'])
-        logger.info('uuid:' + self.uuid)
+        #self.ep_json = json.loads(self.payload['ep'])
+        #self.uuid = util.decode_base64(self.ep_json['cipher']['uuid'])
+        #logger.info('uuid:' + self.uuid)
         self.user_agent = 'okhttp/3.12.16;jdmall;' + self.client + ';version/' + self.client_version + ';build/' + \
                           result['build'] + ';'
         logger.info('user_agent:' + self.user_agent)
